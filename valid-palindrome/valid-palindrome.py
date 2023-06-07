@@ -1,0 +1,10 @@
+import re
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = re.sub(r'[\W_]+', '', s)
+        s = s.lower()
+        print(s)
+        for i in range(len(s)):
+            if (s[i] != s[len(s) - (i + 1)]):
+                return False
+        return True
