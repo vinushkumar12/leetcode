@@ -1,14 +1,6 @@
 class Solution {
     public int[] plusOne(int[] digits) {
-        if (digits.length == 1 && digits[0] == 9) {
-            int [] ans = new int[2];
-            ans[0] = 1;
-            ans[1] = 0;
-            return ans;
-        } else if (digits.length == 1) {
-            digits[0] = digits[0] + 1;
-            return digits;
-        } else if (digits[digits.length - 1] != 9) {
+        if (digits[digits.length - 1] != 9) {
            digits[digits.length - 1] = digits[digits.length - 1] + 1;
            return digits;
        } else {
