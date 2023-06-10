@@ -3,11 +3,6 @@ class Solution {
        int start = 0;
        int end = nums.length - 1;
        int possible = 0;
-       if (nums[0] > target) {
-           return 0;
-       } else if (nums[end] < target) {
-           return end + 1;
-       }
        while (start <= end) {
            int middle = start + (end - start)/2;
            if (nums[middle] == target) {
