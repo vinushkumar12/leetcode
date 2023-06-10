@@ -9,22 +9,20 @@ class Solution {
                return middle;
            } else if (nums[middle] < target) {
                start = middle + 1;
-               int diff1 = target - nums[middle];
                int diff2 = target - nums[possible];
                if (diff2 < 0) {
                    diff2 = -diff2;
                }
-               if (diff2 >= diff1) {
+               if (diff2 >= target - nums[middle] ) {
                    possible = middle + 1;
                }
            } else if (nums[middle] > target) {
                end = middle - 1;
-               int diff1 = nums[middle] - target;
                int diff2 = nums[possible] - target;
                if (diff2 < 0) {
                    diff2 = -diff2;
                }
-               if (diff2 >= diff1) {
+               if (diff2 >= nums[middle] - target) {
                    possible = middle;
                }               
            }
