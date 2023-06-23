@@ -20,7 +20,7 @@ class Solution:
         ans = str(int(num1) + int(num2))
         answer = ListNode()
         temp = answer
-        for i in reversed(ans):
+        for i in ans[::-1]:
             answer.next = ListNode(int(i))
             answer = answer.next
         answer = temp
