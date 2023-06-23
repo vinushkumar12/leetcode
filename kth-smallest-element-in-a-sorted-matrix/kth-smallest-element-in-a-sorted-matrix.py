@@ -1,6 +1,9 @@
 import numpy as np
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        array = np.array(matrix).flatten()
-        array.sort()
-        return array[k - 1]
+        list1 = []
+        for i in range(len(matrix)):
+            for j in range(len(matrix)):
+                list1.append(matrix[i][j])
+        list1.sort()
+        return list1[k-1]
