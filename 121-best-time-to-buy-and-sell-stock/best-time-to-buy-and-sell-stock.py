@@ -3,7 +3,6 @@ class Solution:
         curr_buy = prices[0]
         profit = 0
         for i in range(1, len(prices)):
-            print(curr_buy)
             if curr_buy > prices[i]:
                 curr_buy = prices[i]
             elif prices[i] - curr_buy > profit:
