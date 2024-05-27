@@ -5,9 +5,6 @@ class Solution:
         higher = len(nums) - 1
         while lower <= higher:
             middle = (lower + higher) // 2
-            print(lower, "lower")
-            print(higher, "end")
-            print(middle, "middle")
             if nums[middle] == target:
                 counter = 1
                 solution[0] = middle
