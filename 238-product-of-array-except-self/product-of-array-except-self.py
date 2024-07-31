@@ -9,7 +9,6 @@ class Solution:
             else:
                 arr[i] *= prefix
             prefix *= nums[i]
-        print(arr)
         for i in range(len(nums) - 1, -1, -1):
             if i == len(nums) - 1:
                 arr[len(nums) - 1] *= 1
