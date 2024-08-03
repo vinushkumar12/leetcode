@@ -3,8 +3,6 @@ class Solution:
         mini = nums[0]
         l,r = 0, len(nums) - 1
         while l <= r:
-            print("l", l)
-            print("r", r)
             if nums[l] <= nums[r]:
                 return min(nums[l], mini)
             middle = (l + r) // 2
